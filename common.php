@@ -3,3 +3,42 @@ include 'lib/Cart/Db/cart_db.php';
 include 'lib/Cart/App/cart_app.php';
 include 'lib/Cart/View/cart_view.php';
 include 'lib/Cart/Auth/cart_auth.php';
+
+
+// CART "DATABASE"
+$users = ['sholmes' => [
+			'id' => 1001,
+			'email' => 'sherlock@example.com',
+			'postcode' => 'AA10 1AA',
+			'password' => password_hash('test', PASSWORD_DEFAULT)
+		],
+		'watson' => [
+			'id' => 1002,
+			'email' => 'drwatson`@example.com',
+			'postcode' => 'BB10 A1B',
+			'password' => password_hash('test', PASSWORD_DEFAULT)
+		]
+	];
+
+$camera = [
+	'name' => 'Sony A7S',
+	'price' => 1700
+];
+
+$lens = [
+	'name' => 'Samyang 35mm',
+	'price' => 400
+];
+
+$cart = [
+	'user' => 'sholmes',
+	'items' => [$camera, $lens]
+];
+
+
+//LOAD CART
+
+
+if(file_exists(DATABASE_NAME . DATABASE_EXTENSION)) {
+	$cart = load_cart();
+}
