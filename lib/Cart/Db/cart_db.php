@@ -44,8 +44,6 @@ function update_item(&$cart, $item_id, $new_item) {
 // IO FUNCTIONS
 
 
-const DATABASE_EXTENSION = '.db';
-const DATABASE_NAME = 'cart';
 
 function save_cart($cart, $dbname = DATABASE_NAME) {
 	return file_put_contents($dbname . DATABASE_EXTENSION, serialize($cart));

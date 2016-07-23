@@ -4,6 +4,10 @@ include 'lib/Cart/App/cart_app.php';
 include 'lib/Cart/View/cart_view.php';
 include 'lib/Cart/Auth/cart_auth.php';
 
+use function Cart\Db\load_cart;
+
+const DATABASE_EXTENSION = '.db';
+const DATABASE_NAME = 'cart';
 
 // CART "DATABASE"
 $users = ['sholmes' => [
@@ -35,10 +39,3 @@ $cart = [
 	'items' => [$camera, $lens]
 ];
 
-
-//LOAD CART
-
-
-if(file_exists(DATABASE_NAME . DATABASE_EXTENSION)) {
-	$cart = load_cart();
-}
