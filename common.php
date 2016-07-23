@@ -1,8 +1,5 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+include 'lib/Cart/Db/cart_db.php';
+include 'lib/Cart/App/cart_app.php';
+include 'lib/Cart/View/cart_view.php';
+include 'lib/Cart/Auth/cart_auth.php';

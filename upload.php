@@ -1,7 +1,5 @@
 <?php
-include 'lib/Cart/Db/cart_db.php';
-include 'lib/Cart/Upload/cart_upload.php';
-include 'lib/Cart/View/cart_view.php';
+include 'common.php';
 
 ?>
 

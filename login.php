@@ -1,8 +1,5 @@
 <?php
-include 'lib/Cart/Db/cart_db.php';
-include 'lib/Cart/Auth/cart_auth.php';
-include 'lib/Cart/View/cart_view.php';
-
+include 'common.php';
 ?>
 
 <?php 
