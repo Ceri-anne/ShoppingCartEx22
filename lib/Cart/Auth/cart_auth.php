@@ -11,7 +11,7 @@ function login($users, $username, $password) {
 		$_SESSION['username'] = $username;
 		header('Location: product.php');
 	} else {
-		die('ERROR: login failed');
+		trigger_error('ERROR: login failed');
 	}
 }
 
