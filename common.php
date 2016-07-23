@@ -40,3 +40,6 @@ $cart = [
 	'items' => [$camera, $lens]
 ];
 
+set_error_handler(function ($errorType, $errorMessage) {
+ 	echo \Cart\View\display('error', ['message' => $errorMessage]);
+});
